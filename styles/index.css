@@ -27,6 +27,10 @@ figure{
     height: 100%;
 }
 
+textarea{
+    resize: none !important;
+}
+
 .img-fluid {
     height: 100% !important;
     width: 100%;
@@ -163,4 +167,11 @@ figure{
     display: inline-block;
 }
 
-#blog .row > div{}
+#contact{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+#contact .row{
+    margin-top: 1.4rem;
+}
