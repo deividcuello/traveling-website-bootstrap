@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&display=swap');
+
+
+:root{
+    --primary-color: rgb(0, 0, 255);
+    --secondary-color: rgb(255, 255, 0);
+    --black: rgb(17, 17, 17);
+    --white: rgb(255, 255, 255);
+    --red: rgb(255, 0, 0);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    color: var(--black) !important;
+}
+
+body{
+    font-family: 'DynaPuff', cursive !important;
+    overflow-x: hidden;
+}
+
+figure{
+    width: 100%;
+    height: 100%;
+}
+
+.img-fluid {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+.object-contain{
+    object-fit: contain;
+}
+
+.btn{
+    background-color: var(--secondary-color) !important;
+    border-radius: 0.5rem !important;
+}
+
+.primary-background{
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
+}
+
+#header nav{
+    background-color: var(--white) !important;
+}
+
+#header .navbar-brand{
+    color: var(--primary-color) !important;
+    font-size: 1.6rem;
+}
+
+#header .hero{
+    min-height: 100vh;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.727), rgba(0, 0, 0, 0)), url('https://cdn.pixabay.com/photo/2018/03/12/20/07/maldives-3220702_640.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header .hero h2{
+    color: var(--white) !important;
+    text-shadow: 2px 2px 2px var(--black);
+}
+
+#header .hero h2 span{
+    color: var(--white) !important;
+    text-shadow: 2px 2px 2px var(--black);
+}
+
+#header .hero button i{
+    transform: translateX(-5rem);
+    transition: transform .2s ease;
+    position: absolute;
+}
+
+#header .hero button{
+    animation: move 0.9s linear 0s infinite alternate;
+    transition: all .2s ease;
+    overflow: hidden;
+}
+
+#header .hero button:hover{
+    background-color: var(--red) !important;
+    color: var(--white) !important;
+}
+
+#header .hero button:hover i{
+    position: static;
+    transform: translateX(0rem);
+}
+
+@keyframes move {
+    0%   {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+#about p{
+    font-weight: lighter;
+}
+
+#places .col-4{
+    position: relative;
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+
+#places .overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, -50%);
+    width: 94.5%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.642);
+    transition: transform .2s ease;
+}
+
+#places .col-4:hover .overlay{
+    transform: translate(-50%, -50%) !important;
+}
+
+#places .overlay h3,
+#places .overlay p{
+    color: var(--white) !important;
+}
+
+#blog .row >div{
+    height: 100%;
+    border-radius: 0.5rem;
+    width: 29%;
+    box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+}
+
+#blog .row > div h5{
+    font-size: 1.3rem;
+}
+
+#blog .row > div p{
+    opacity: 0.5;
+}
+
+#blog .row > div .readmore{
+    color: var(--primary-color) !important;
+    transform: translateY(-1rem);
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+#blog .row > div{}
