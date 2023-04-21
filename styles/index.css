@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&display=swap');
 
-
+/*VARIABLES*/
 :root{
     --primary-color: rgb(0, 0, 255);
     --secondary-color: rgb(255, 255, 0);
@@ -9,6 +9,7 @@
     --red: rgb(255, 0, 0);
 }
 
+/*GENERAL STYLES*/
 *,
 *::after,
 *::before{
@@ -37,13 +38,31 @@ textarea{
     object-fit: cover;
 }
 
+.d-flex{
+    gap: 3rem;
+}
+
 .object-contain{
     object-fit: contain;
+}
+
+.fa-solid.fa-bars{
+    font-size: 2rem;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.fa-solid.fa-bars:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
 }
 
 .btn{
     background-color: var(--secondary-color) !important;
     border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
 }
 
 .primary-background{
@@ -51,6 +70,7 @@ textarea{
     color: var(--white) !important;
 }
 
+/*HEADER*/
 #header nav{
     background-color: var(--white) !important;
 }
@@ -60,13 +80,19 @@ textarea{
     font-size: 1.6rem;
 }
 
+/*HERO*/
 #header .hero{
     min-height: 100vh;
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.727), rgba(0, 0, 0, 0)), url('https://cdn.pixabay.com/photo/2018/03/12/20/07/maldives-3220702_640.jpg');
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.727), rgba(0, 0, 0, 0)), url('../assets/hero-bg.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+#header .hero .d-flex{
+    gap: 0;
 }
 
 #header .hero h2{
@@ -113,14 +139,16 @@ textarea{
     }
 }
 
+/*ABOUT*/
 #about p{
     font-weight: lighter;
 }
 
-#places .col-4{
+/*PLACES*/
+#places .grid div{
     position: relative;
     overflow: hidden;
-    margin: 0.7rem 0;
+    margin: 1.4rem 0 0 0;
 }
 
 #places .overlay{
@@ -143,13 +171,31 @@ textarea{
     color: var(--white) !important;
 }
 
-#blog .row >div{
-    height: 100%;
+/*BLOG*/
+#blog .article > div{
     border-radius: 0.5rem;
-    width: 29%;
     box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+    width: 15rem;
+}
+
+#blog figure{
+    height: 10rem !important;
+}
+
+#blog .article{
+    display: flex;
+}
+
+#blog .article .text{
+    height: 100%;
+}
+
+#blog .article .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #blog .row > div h5{
@@ -167,11 +213,21 @@ textarea{
     display: inline-block;
 }
 
+/*CONTACT*/
 #contact{
     max-width: 70%;
     margin: 0 auto;
 }
 
-#contact .row{
-    margin-top: 1.4rem;
+/*MEDIA QUERIES*/
+@media (max-width: 991.98px) {
+    html{
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 767px) {
+    #about figure img{
+        width: 50%;
+    }
 }
