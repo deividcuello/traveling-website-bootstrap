@@ -145,10 +145,14 @@ textarea{
 }
 
 /*PLACES*/
-#places .grid div{
-    position: relative;
-    overflow: hidden;
+#places .grid div {
     margin: 1.4rem 0 0 0;
+}
+
+#places .grid .col-md-4{
+    position: relative;
+    margin: 1.4rem 0 0 0;
+    overflow: hidden;
 }
 
 #places .overlay{
@@ -162,8 +166,9 @@ textarea{
     transition: transform .2s ease;
 }
 
-#places .col-4:hover .overlay{
-    transform: translate(-50%, -50%) !important;
+#places .col-md-4:hover .overlay{
+    transform: translate(-50%, -60%) !important;
+    cursor: pointer;
 }
 
 #places .overlay h3,
@@ -229,5 +234,14 @@ textarea{
 @media (max-width: 767px) {
     #about figure img{
         width: 50%;
+    }
+
+    #places .col-12 .overlay{
+        width: 96.9%;
+    }
+
+    #places .col-md-4:hover .overlay{
+        transform: translate(-50%, -50%) !important;
+        height: 140%;
     }
 }
